@@ -14,10 +14,10 @@ const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;
 export const LabelStory = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 LabelStory.args = {
-  label: "This is a label story!",
+  content: "This is a label story!",
 };
 
 export const ClickMe = Template.bind({});
 ClickMe.args = {
-  label: "Click me!",
+  content: "Click me!",
 };
