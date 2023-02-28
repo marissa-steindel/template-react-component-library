@@ -2,11 +2,12 @@ import React from "react";
 // import './Label.css';
 
 export interface LabelProps {
-  content: string;
+  text: string;
+  inputID?: string;
 }
 
 const Label = (props: LabelProps) => {
-  return <label>{props.content}</label>;
+  return(<label htmlFor={props.inputID}>{props.text}</label>);
 };
 
 export default Label;

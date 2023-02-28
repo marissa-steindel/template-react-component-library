@@ -9,6 +9,6 @@ import Button from "./Button";
 // to know more about tests, read the React Testing Library documentation
 describe("Button", () => {
   test("renders the Button component", () => {
-    render(<Button label="Hello world!" />);
+    render(<Button text="Hello world!" />);
   });
 });
