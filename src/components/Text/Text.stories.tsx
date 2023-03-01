@@ -1,6 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Text from "./Text";
+import { TextProps } from "./Text.types";
+
 
 // export interface TextProps {
 //   content: string;

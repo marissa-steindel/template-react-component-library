@@ -1,10 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
-
-// define the props of the component
-export interface TextProps {
-  content: string;
-}
+import { TextProps } from "./Text.types";
 
 // define the styles of the HTML tags of the component
 const StyledText = styled.p`

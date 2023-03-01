@@ -1,12 +1,6 @@
 import React from "react";
-import Label from "../Label";
-
-export interface DropdownProps {
-  name: string;
-  selectID: string;
-  labelText: string;
-  optionValues: string[];
-}
+// import Label from "../Label";
+import { DropdownProps } from "./Dropdown.types";
 
 const Dropdown = (props: DropdownProps) => {
   return(

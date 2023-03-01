@@ -1,9 +1,6 @@
 import React from "react";
+import { ImageProps } from "./Image.types";
 
-export interface ImageProps {
-  src: string;
-  alt: string;
-}
 
 const Image = (props: ImageProps) => {
 

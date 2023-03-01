@@ -1,11 +1,5 @@
 import React from "react";
-
-export interface HeroImageProps {
-  url: string;
-  alt: string;
-  title: string;
-  subtitle: string;
-}
+import { HeroImageProps } from "./HeroImage.types";
 
 const HeroImage = (props: HeroImageProps) => {
 

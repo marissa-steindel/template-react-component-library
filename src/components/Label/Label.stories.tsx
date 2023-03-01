@@ -1,6 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Label from "./Label";
+import { LabelProps } from "./Label.types";
+
 
 export default {
   title: "Marissa/Label",

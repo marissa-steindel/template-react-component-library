@@ -1,11 +1,5 @@
 import React from "react";
-
-export interface CardProps {
-  src: string;
-  alt: string;
-  title: string;
-  text: string;
-}
+import { CardProps } from "./Card.types";
 
 const Card = (props: CardProps) => {
   return(

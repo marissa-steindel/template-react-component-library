@@ -1,10 +1,5 @@
 import React from "react";
-// import './Label.css';
-
-export interface LabelProps {
-  text: string;
-  inputID?: string;
-}
+import { LabelProps } from "./Label.types";
 
 const Label = (props: LabelProps) => {
   return(<label htmlFor={props.inputID}>{props.text}</label>);

@@ -1,6 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Image from "./Image";
+import { ImageProps } from "./Image.types";
 
 
 export default {

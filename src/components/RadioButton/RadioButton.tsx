@@ -1,11 +1,7 @@
 import React from "react";
 import Label from "../Label";
+import { RadioButtonProps } from "./RadioButton.types";
 
-export interface RadioButtonProps {
-  inputID: string;
-  name: string;
-  value: string;
-}
 
 const RadioButton = (props: RadioButtonProps) => {
 

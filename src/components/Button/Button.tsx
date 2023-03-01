@@ -4,15 +4,8 @@ import React, {FC} from "react";
 import styled from 'styled-components';
 // import the CSS from this directory
 // import './Button.css';
-
-// interface specifies the properties or fields required of objects that implement it
-// storybook functionality:
-// default text and background colour
-// default and disabled state
-export interface ButtonProps {
-  text?: string;
-  disabled?: boolean;
-}
+// import the properties for the Button component
+import {ButtonProps} from './Button.types';
 
 const StyledButton = styled.button<ButtonProps>`
     background-color: ${props => props.disabled ? "grey" : "#6bedb5" };
