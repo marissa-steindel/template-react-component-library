@@ -1,16 +1,26 @@
-import React from "react";
-import TableCell from "./TableCell/TableCell";
+import React,{FC} from "react";
+import styled from 'styled-components';
+import TableCell from "../TableCell/TableCell";
+// import { TableRowProps } from "./TableRow.types";
 
-export interface TableRow {
-  rowObject: Array<string>;
+export interface TableRowProps {
+  rowArray: Array<string>;
+  backgroundColor?: string;
+  fontColor?: string;
+  disabled: boolean;
 }
 
-const TableRow = (props: TableRow) => {
+const StyledTableRow = styled.tr<TableRowProps>`
+
+`;
+
+const TableRow: FC<TableRowProps> = (props: TableRowProps) => {
   return(
     <tr>
-      {props.rowObject.map((datum) => <TableCell value={datum}/>)}
+      {props.rowArray.map((datum) => <TableCell {...props} value={datum}/>)}
     </tr>
-  )
+  );
+
 };
 
 export default TableRow;

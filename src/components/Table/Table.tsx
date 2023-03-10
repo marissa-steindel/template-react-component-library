@@ -1,35 +1,42 @@
-import React from "react";
-import TableHeader from "./TableHeader/TableHeader";
-import TableHeading from "./TableHeading/TableHeading";
-import TableRow from "./TableRow/TableRow";
-import TableFooter from "./TableFooter/TableFooter";
+import React,{FC} from "react";
+import styled from 'styled-components';
+import StyledTableHeader from "./TableHeader/TableHeader";
+import StyledTableRow from "./TableRow/TableRow";
+import StyledTableFooter from "./TableFooter/TableFooter";
+// import { TableProps } from "./Table.types";
 
 export interface TableProps {
-  headings: Array<string>;
+  header: string[];
+  headerColor:string;
+  footerColor:string;
   rows: Array<string[]>;
+  footer: string[];
+  disabled: boolean;
 }
 
-const Table = (props: TableProps) => {
+// define the styles of the HTML tags of the component
+const StyledTable = styled.table<TableProps>`
+  border: 5px solid black;
+  border-collapse: collapse;
+  cursor: ${props => props.disabled ? "not-allowed" : "default"};
+`;
 
-  return(
+const Table: FC<TableProps> = ({header,footer,rows,...props}) => {
+return(
     <table>
-      <TableHeader/>
+      <StyledTableHeader rowArray={header} {...props}/>
       <tbody>
-        {/* table headings */}
-        <tr>
-          {props.headings.map((heading) =>
-              <TableHeading column={heading}/>
-            )
-          }
-        </tr>
-
-        {/* table rows */}
-        {props.rows.map((rowArray) => <TableRow rowObject={rowArray} /> )}
+        {rows.map((singleRow) => <StyledTableRow rowArray={singleRow} {...props}/> )}
       </tbody>
-
-      <TableFooter/>
+      <StyledTableFooter rowArray={footer} {...props}/>
     </table>
   );
 };
 
 export default Table;
+
+
+// while (tableData[0].rowData.length > 0)
+// {
+//  console.log( tableData.map((row)  => row.rowData.shift()))
+// }

@@ -14,10 +14,12 @@ const Template: ComponentStory<typeof Table> = (args) => <Table {...args} />;
 
 export const Visbility = Template.bind({});
 Visbility.args = {
-  headings: ['A', 'B', 'C'],
+  header: ['A', 'B', 'C'],
   rows: [
     ['A1', 'B1', 'C1'],
     ['A2', 'B2', 'C2'],
     ['A3', 'B3', 'C3'],
   ],
+  footer:['D','E','F'],
+  disabled: false,
 };
