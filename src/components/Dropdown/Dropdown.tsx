@@ -2,7 +2,6 @@ import React, {FC} from "react";
 import styled from 'styled-components';
 import { DropdownProps } from "./Dropdown.types";
 import Label from "../Label/Label";
-import { LabelProps } from "../Label/Label.types";
 
 // define the styles of the HTML tags of the component
 const StyledSelect = styled.select<DropdownProps>`
@@ -30,14 +29,13 @@ const StyledOption = styled.option<DropdownProps>`
 //    )}
 // </select>
 
-// const Dropdown: FC<DropdownProps> = (props: DropdownProps, labelProps: LabelProps) => {
 const Dropdown: FC<DropdownProps> = ({ name, selectID, labelText, optionValues, ...props}) => {
     return(
     <>
       <Label inputID={selectID} text={labelText}/>
       <StyledSelect name={name} selectID={selectID} labelText={labelText} optionValues={optionValues} {...props}>
-        {optionValues.map((option)=>
-            <StyledOption name={name} selectID={selectID} labelText={labelText} optionValues={optionValues} {...props}>{option}</StyledOption>
+        {optionValues.map((option,i)=>
+            <StyledOption name={name} selectID={selectID} labelText={labelText} optionValues={optionValues} key={i} {...props}>{option}</StyledOption>
           )}
       </StyledSelect>
     </>

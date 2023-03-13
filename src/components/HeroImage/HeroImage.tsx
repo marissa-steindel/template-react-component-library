@@ -8,7 +8,7 @@ export interface HeroImageProps {
   src: string;
   alt: string;
   title: string;
-  subtitle: string;
+  subtitle?: string;
 }
 
 // define the styles of the HTML tags of the component

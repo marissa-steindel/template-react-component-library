@@ -5,6 +5,6 @@ import Text from "./Text";
 
 describe("Text", () => {
   test("renders the Text component", () => {
-    render(<Text content="I am text!" />);
+    render(<Text content="I am text!" disabled={false} />);
   });
 });
