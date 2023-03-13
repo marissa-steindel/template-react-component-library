@@ -7,8 +7,8 @@ import StyledTableRow from "./TableRow/TableRow";
 
 export interface TableProps {
   header: string[];
-  rows: Array<string[]>;
   footer: string[];
+  rows: Array<string[]>;
   headerColor: string;
   footerColor: string;
   disabled: boolean;
@@ -23,7 +23,7 @@ const StyledTable = styled.table<TableProps>`
 
 const Table: FC<TableProps> = ({header,footer,rows,headerColor,footerColor,disabled}) => {
 return(
-    <StyledTable disabled={disabled}>
+    <StyledTable header={header} footer={footer} rows={rows} headerColor={headerColor} footerColor={footerColor} disabled={disabled}>
       <StyledTableHeader rowArray={header} backgroundColor={headerColor} />
       <tbody>
         {rows.map((singleRow) => <StyledTableRow rowArray={singleRow}/> )}
