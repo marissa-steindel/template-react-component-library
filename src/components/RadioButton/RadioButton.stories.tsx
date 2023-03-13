@@ -17,5 +17,6 @@ export const Visbility = Template.bind({});
 Visbility.args = {
   inputID:"some input id",
   name: "name property",
-  value: "some value",
+  values: ["some value","over","the","rainbow"],
+  legend: "Judy Garland"
 };
