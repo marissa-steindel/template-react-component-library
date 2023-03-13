@@ -1,8 +1,8 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Text from "./Text";
-import { TextProps } from "./Text.types";
-import { buildQueries } from "@testing-library/react";
+// import { TextProps } from "./Text.types";
+// import { buildQueries } from "@testing-library/react";
 
 // details for the Storybook sidebar
 export default {

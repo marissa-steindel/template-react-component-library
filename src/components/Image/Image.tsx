@@ -6,7 +6,6 @@ import { ImageProps } from "./Image.types";
 const StyledImage = styled.img<ImageProps>`
   width: ${props => props.width};
   height: ${props => props.height};
-  cursor: ${props => props.disabled ? "not-allowed" : "default"};
 `;
 
 const Image: FC<ImageProps> = (props: ImageProps) => {

@@ -9,7 +9,7 @@ export interface RadioButtonProps {
   legend: string;
 }
 
-const RadioButton: FC<RadioButtonProps> = ({inputID,name,values,legend }) => {
+const RadioButton: FC<RadioButtonProps> = ({inputID,name,values,legend}) => {
 
   return(
     <form>

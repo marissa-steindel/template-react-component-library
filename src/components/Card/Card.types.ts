@@ -3,4 +3,7 @@ export interface CardProps {
   alt: string;
   title: string;
   text: string;
+  // cardHeight: string;
+  cardWidth: string;
+  disabled: boolean;
 }

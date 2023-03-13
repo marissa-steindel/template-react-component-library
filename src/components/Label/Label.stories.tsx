@@ -13,6 +13,6 @@ const Template: ComponentStory<typeof Label> = (args) => <Label {...args} />;
 
 export const LabelStory = Template.bind({});
 LabelStory.args = {
-  text: "This is a label story!",
+  text: "I am a <label> tag that accompanies form elements:",
 };
 

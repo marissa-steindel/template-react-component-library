@@ -1,16 +1,16 @@
 import React,{FC} from "react";
 import styled from 'styled-components';
 import StyledTableHeader from "./TableHeader/TableHeader";
-import StyledTableRow from "./TableRow/TableRow";
 import StyledTableFooter from "./TableFooter/TableFooter";
+import StyledTableRow from "./TableRow/TableRow";
 // import { TableProps } from "./Table.types";
 
 export interface TableProps {
   header: string[];
-  headerColor:string;
-  footerColor:string;
   rows: Array<string[]>;
   footer: string[];
+  headerColor: string;
+  footerColor: string;
   disabled: boolean;
 }
 
@@ -21,15 +21,15 @@ const StyledTable = styled.table<TableProps>`
   cursor: ${props => props.disabled ? "not-allowed" : "default"};
 `;
 
-const Table: FC<TableProps> = ({header,footer,rows,...props}) => {
+const Table: FC<TableProps> = ({header,footer,rows,headerColor,footerColor,disabled}) => {
 return(
-    <table>
-      <StyledTableHeader rowArray={header} {...props}/>
+    <StyledTable disabled={disabled}>
+      <StyledTableHeader rowArray={header} backgroundColor={headerColor} />
       <tbody>
-        {rows.map((singleRow) => <StyledTableRow rowArray={singleRow} {...props}/> )}
+        {rows.map((singleRow) => <StyledTableRow rowArray={singleRow}/> )}
       </tbody>
-      <StyledTableFooter rowArray={footer} {...props}/>
-    </table>
+      <StyledTableFooter rowArray={footer} backgroundColor={footerColor}/>
+    </StyledTable>
   );
 };
 

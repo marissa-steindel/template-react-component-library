@@ -15,8 +15,10 @@ const Template: ComponentStory<typeof Dropdown> = (args) => <Dropdown {...args} 
 
 export const Visbility = Template.bind({});
 Visbility.args = {
-  // label: "Which is the best ear worm?:"
+  labelText: "Which is the best ear worm?:",
   name: "earworms",
+  selectID: "earworms",
+  backgroundColor: "#8080e4",
   optionValues: [
     "Time Warp",
     "Gangnam Style",
@@ -27,4 +29,5 @@ Visbility.args = {
     "Final Countdown",
     "YMCA",
   ],
+  disabled: false,
 };

@@ -1,8 +1,10 @@
-import React from "react";
+import React,{FC} from "react";
 import { LabelProps } from "./Label.types";
 
-const Label = (props: LabelProps) => {
-  return(<label htmlFor={props.inputID}>{props.text}</label>);
+const Label: FC<LabelProps> = ({inputID, text}) => {
+  return(
+    <label htmlFor={inputID}>{text}</label>
+  );
 };
 
 export default Label;

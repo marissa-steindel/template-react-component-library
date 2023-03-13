@@ -4,4 +4,5 @@ export interface DropdownProps {
   labelText: string;
   optionValues: string[];
   disabled: boolean;
+  backgroundColor: string;
 }

@@ -1,4 +1,4 @@
 export interface LabelProps {
   text: string;
-  inputID?: string;
+  inputID: string;
 }

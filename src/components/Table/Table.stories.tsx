@@ -21,5 +21,7 @@ Visbility.args = {
     ['A3', 'B3', 'C3'],
   ],
   footer:['D','E','F'],
+  headerColor: "pink",
+  footerColor:"yellow",
   disabled: false,
 };

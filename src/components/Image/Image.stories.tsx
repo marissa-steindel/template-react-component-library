@@ -20,5 +20,4 @@ Visbility.args = {
   // src:"https://source.unsplash.com/random/800x500",
   src:"https://source.unsplash.com/random",
   alt: "Alt text description of the image.",
-  disabled: false,
 };

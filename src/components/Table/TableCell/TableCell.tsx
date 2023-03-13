@@ -6,15 +6,12 @@ export interface TableCellProps {
   value: string;
   backgroundColor?: string;
   fontColor?: string;
-  disabled: boolean;
+  // disabled: boolean;
 }
 
 const StyledTableCell = styled.td<TableCellProps>`
   font-family: Arial, Helvetica, sans-serif;
-  background-color: ${(props) =>
-    props.disabled ? '#cecdcd' : props.backgroundColor ? props.backgroundColor : 'none'};
-  color: ${(props) =>
-    props.disabled ? "darkgrey" : props.fontColor ? props.fontColor : 'blue'};
+  background-color: ${(props) => props.backgroundColor};
   border: 1px solid black;
   width: 100px;
   text-align: center;

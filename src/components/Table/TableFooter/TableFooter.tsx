@@ -1,7 +1,9 @@
 import React,{FC} from "react";
 import styled from 'styled-components';
-import TableCell from "../TableCell/TableCell";
-import TableRow from "../TableRow/TableRow";
+// import TableRow from "../TableRow/TableRow";
+import StyledTableRow from "../TableRow/TableRow";
+import { TableRowProps } from "../TableRow/TableRow";
+
 
 export interface TableFooterProps {
   rowArray: string[];
@@ -10,23 +12,8 @@ export interface TableFooterProps {
   disabled: boolean;
 }
 
-const StyledTableFooter = styled.tfoot<TableFooterProps>`
-  border: 5px solid black;
-  background-color: ${(props) =>
-    props.disabled ? '#cecdcd' : props.backgroundColor ? props.backgroundColor : '#8080e4'};
-  color: ${(props) =>
-    props.disabled ? "darkgrey" : props.fontColor ? props.fontColor : "#6bedb5"};
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  cursor: default;
-  /* width: 500px; */
-  /* padding: 20px; */
-  /* display: block; */
-
-  `;
-
-const TableFooter: FC<TableFooterProps> = ({rowArray,...props}) => {
-  return <TableRow {...props} rowArray={rowArray}/>;
+const TableFooter: FC<TableRowProps> = ({rowArray,...props}) => {
+  return <StyledTableRow {...props} rowArray={rowArray}/>;
 }
 
 export default TableFooter;

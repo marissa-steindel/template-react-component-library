@@ -1,7 +1,7 @@
 import React from "react";
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 import Card from "./Card";
-import { CardProps } from "./Card.types";
+// import { CardProps } from "./Card.types";
 
 
 export default {
@@ -19,6 +19,9 @@ Visbility.args = {
   alt: "dummy alt text",
   title: "Marissa Steindel",
   text: "Marissa is the coolest person in the entire world.",
+  // cardHeight: 200,
+  cardWidth: "200px",
+  disabled: false,
 };
 
 

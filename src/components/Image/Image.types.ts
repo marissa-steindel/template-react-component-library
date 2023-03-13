@@ -1,7 +1,6 @@
 export interface ImageProps {
   src: string;
   alt: string;
-  height: number;
-  width: number;
-  disabled: boolean;
+  height: number | string;
+  width: number | string;
 }

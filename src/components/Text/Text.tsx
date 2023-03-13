@@ -7,6 +7,7 @@ const StyledText = styled.p<TextProps>`
   background-color: ${props => props.disabled ? "lightgrey":"#8080e4"};
   color: ${props => props.disabled ? "#747474":"#6bedb5"};
   font-family: Arial, Helvetica, sans-serif;
+  cursor: ${props => props.disabled ? "not-allowed" : "default"};
 `;
 
 // define the component

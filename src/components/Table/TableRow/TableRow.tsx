@@ -6,8 +6,8 @@ import TableCell from "../TableCell/TableCell";
 export interface TableRowProps {
   rowArray: Array<string>;
   backgroundColor?: string;
-  fontColor?: string;
-  disabled: boolean;
+  // fontColor?: string;
+  // disabled: boolean;
 }
 
 const StyledTableRow = styled.tr<TableRowProps>`
