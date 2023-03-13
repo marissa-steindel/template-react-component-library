@@ -19,6 +19,7 @@ Visbility.args = {
   name: "earworms",
   selectID: "earworms",
   backgroundColor: "#8080e4",
+  fontColor:"#6bedb5",
   optionValues: [
     "Time Warp",
     "Gangnam Style",

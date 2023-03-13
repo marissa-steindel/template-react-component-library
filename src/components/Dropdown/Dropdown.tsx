@@ -5,19 +5,18 @@ import Label from "../Label/Label";
 import { LabelProps } from "../Label/Label.types";
 
 // define the styles of the HTML tags of the component
-const StyledSelect = styled.select`
-  background-color: ${props => props.disabled ? "lightgrey":"#8080e4"};
-  color: ${props => props.disabled ? "#747474":"#6bedb5"};
+const StyledSelect = styled.select<DropdownProps>`
+  background-color: ${props => props.disabled ? "lightgrey": props.backgroundColor};
+  color: ${props => props.disabled ? "#747474": props.fontColor? props.fontColor : "black"};
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   padding: 2px 10px;
   border-radius: .5rem;
   display: block;
+  cursor: ${props => props.disabled ? "not-allowed" : "default"};
 `;
 
-const StyledOption = styled.option`
-  background-color: ${props => props.disabled ? "lightgrey":"#8080e4"};
-  color: ${props => props.disabled ? "#747474":"#6bedb5"};
+const StyledOption = styled.option<DropdownProps>`
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
   padding: 2px 10px;
@@ -32,13 +31,13 @@ const StyledOption = styled.option`
 // </select>
 
 // const Dropdown: FC<DropdownProps> = (props: DropdownProps, labelProps: LabelProps) => {
-const Dropdown: FC<DropdownProps> = ({ name, selectID, labelText, optionValues, disabled, ...props}) => {
+const Dropdown: FC<DropdownProps> = ({ name, selectID, labelText, optionValues, ...props}) => {
     return(
     <>
       <Label inputID={selectID} text={labelText}/>
-      <StyledSelect>
+      <StyledSelect name={name} selectID={selectID} labelText={labelText} optionValues={optionValues} {...props}>
         {optionValues.map((option)=>
-            <StyledOption>{option}</StyledOption>
+            <StyledOption name={name} selectID={selectID} labelText={labelText} optionValues={optionValues} {...props}>{option}</StyledOption>
           )}
       </StyledSelect>
     </>
