@@ -24,6 +24,7 @@ const StyledHeroTextDiv = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-shadow: -1px 0 10px white, 0 1px 10px white, 1px 0 10px white, 0 -1px 10px white;
 `;
 
 const StyledTitle = styled.h1`
